@@ -43,6 +43,10 @@ ol li, a {
     text-decoration: none;
 }
 
+section {
+    padding: 6rem 0 0 0;
+}
+
 .btn {
     margin-left: 40px;
     background-color: var(--white);
