@@ -2,7 +2,7 @@
 
 :root {
     --white: #fff;
-    --black: #111;
+    --black: #000;
     --primary_color: #1f4a40;
 }
 
@@ -11,11 +11,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", serif;
+    scroll-behavior: smooth;
 }
 
 body {
     position: relative;
-    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -44,7 +44,7 @@ ol li, a {
 }
 
 section {
-    padding: 6rem 0 0 0;
+    padding: 6rem 0;
 }
 
 .btn {
@@ -60,8 +60,24 @@ section {
     cursor: pointer;
 }
 
-.sec-space {
-    padding: 4rem 0;
+.g_btn{
+    background-color: #51a995;
+    color: var(--white);
+    padding: 9px 30px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.g_btn:hover{
+    background-color: var(--primary_color);
+}
+
+#key{
+    font-size: .8rem;
+    background-color: #edcfee;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .extra-space {
@@ -154,18 +170,8 @@ section {
 
 .hero_info .search .hero_btn{
     position: absolute;
-    top: 9px;
+    top: 10px;
     right: 20px;
-    background-color: #51a995;
-    color: var(--white);
-    padding: 9px 30px;
-    border-radius: 35px;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-.hero_info .search .hero_btn:hover{
-    background-color: var(--primary_color);
 }
 
 .hero_img {
@@ -174,24 +180,166 @@ section {
 
 .hero_img img {
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
+/*-- Features Section --*/
+.features_cards_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
 
+.features_card {
+    width: 200px;
+}
 
+.features_card  .features_card_img{
+    width: 50px;
+    margin-top: 3rem;
+}
 
+/* Job Listing section */
+.jobs .jobs_id {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
 
+.jobs .jobs_id li {
+    padding: 20px 40px;
+    cursor: pointer;
+    color: var(--black);
+    transition: all .1s ease;
+}
 
+.jobs .jobs_id li.activated {
+    background-color: #51a995;
+    color: var(--white);
+}
 
+.jobs .jlist {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-items: start;
+    color: var(--black);
+    padding: 2rem;
+    cursor: pointer;
+}
 
+.jobs .jlist:hover {
+    background-color: #ecf1ee;
+}
 
+.jobs .jlist.delete {
+    display: none;
+}
 
+.jobs .jlist img {
+    width: 40px;
+}
 
+.jobs .jlist h3 {
+    padding-bottom: 0;
+}
 
+/* brand section */
+.brands_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
 
+.brands_wrapper .brand_img {
+    margin: 1rem 1rem 1rem 0;
+}
 
+/* team section */
+.team_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.team_wrapper .team_member{
+    border: 1px solid #c1e1d9;
+    width: 280px;
+    padding: 2rem 0;
+    border-radius: 20px;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.team_wrapper .team_member img{
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team_wrapper .team_member .skills{
+    padding-bottom: 3rem;
+}
+
+/* footer section */
+.footer {
+    background-color: var(--primary_color);
+    color: var(--white);
+    padding: 4rem 0;
+}
+
+.footer .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    flex-wrap: wrap;
+}
+
+.footer .top .logo{
+    width: 170px;
+    margin-bottom: 1rem;
+}
+
+.footer .top .social_icons i{
+    color: var(--white);
+    font-size: 2rem;
+    margin-left: .5rem;
+}
+
+.footer .bottom{
+    padding: 2rem 0 4rem 0;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .bottom div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .bottom div a {
+    color: var(--white);
+    line-height: 35px;
+    font-size: 1.1rem;
+}
+
+.footer .container .copyright {
+    color: var(--white);
+}
 
 
 
@@ -201,7 +349,7 @@ section {
 
 
 /* Media Queries */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
 /* navbar section */
     .nav_menu {
     background-color: var(--white);
@@ -265,7 +413,7 @@ section {
         justify-content: center;
         align-items: start;
         height: auto;
-        padding: 8rem 0;
+        padding: 4rem 0;
     }
 
     .hero_info {
@@ -274,7 +422,84 @@ section {
 
     .hero_img {
         display: none;
+    }
+
+/* features section */
+    .features_card {
+        width: 80%;
+        margin: auto;
+    }
+
+/* Job Listing section */
+    .jobs .jobs_id {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .jobs .jobs_id li {
+    padding: 20px 30px;
+    text-wrap: nowrap;
 }
 
+    .jobs_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+    .jobs .jlist {
+        width: 48%;
+        margin-top: 1rem;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 15px;
+        padding: 2rem 1rem;
+        text-align: center;
+        justify-items: center;
+    }
+
+   /* team section */
+    .team_wrapper .team_member{
+    width: 48%;
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 
+    .team_wrapper .team_member .skills{
+    padding-bottom: 1rem;
+}
+
+/* footer section */
+.footer .top{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+}
+
+.footer .top .social_icons i {
+    margin: 1rem 1rem 0 0;
+}
+
+.footer .bottom {
+    padding: 2rem 0 0 0;
+}
+
+.footer .bottom div {
+    width: 50%;
+    margin-bottom: 50px;
+}
+}
+
+@media(max-width: 500px) {
+    /* jobs section */
+    .jobs .jlist {
+        width: 100%;
+    }
+
+    /* team section */
+    .team_wrapper .team_member{
+        width: 100%;
+    }
+}

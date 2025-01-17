@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Jstack</title>
@@ -40,7 +39,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="home">
         <div class="container">
             <div class="hero_wrapper">
                 <div class="hero_info">
@@ -52,7 +51,7 @@
                     </p>
                     <div class="search">
                         <input type="text" placeholder="Search your job here...">
-                        <a href="#" class="btn hero_btn">Search</a>
+                        <a href="#" class="g_btn hero_btn">Search</a>
                     </div>
                 </div>
                 <div class="hero_img">
@@ -70,26 +69,215 @@
                     <h2 class="features_title"> Need something done?</h2>
                     <p class="features_text"> Most veiwed and all-time top-selling services</p>
                 </div>
-                <div class="features_cards">
-                    
+                <div class="features_cards_wrapper">
+                    <div class="features_card">
+                        <img class="features_card_img" src="images/fe 1.png" alt="img">
+                        <h3 class="features_card_title">Post a job</h3>
+                        <p class="features_card_text">It,s free and easy to post a job. Simply fill in a title, description.</p>
+                    </div>
+                    <div class="features_card">
+                        <img class="features_card_img" src="images/fe 2.png" alt="img">
+                        <h3 class="features_card_title">Choose freelancing</h3>
+                        <p class="features_card_text">It,s free and easy to post a job. Simply fill in a title, description.</p>
+                    </div>
+                    <div class="features_card">
+                        <img class="features_card_img" src="images/fe 3.png" alt="img">
+                        <h3 class="features_card_title">Pay safely</h3>
+                        <p class="features_card_text">It,s free and easy to post a job. Simply fill in a title, description.</p>
+                    </div>
+                    <div class="features_card">
+                        <img class="features_card_img" src="images/fe 4.png" alt="img">
+                        <h3 class="features_card_title">We're here to help</h3>
+                        <p class="features_card_text">It,s free and easy to post a job. Simply fill in a title, description.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Job Listing Section -->
-
+    <section class="jobs" id="jobs">
+        <div class="container">
+            <div class="jobs_heading">
+                <h2 class="jobs_title">Jobs in demand</h2>
+                <p class="jobs_text">Most viewed and all-time top-selling services</p>
+            </div>
+            <ul class="jobs_id">
+                <li  data-target="all" class="activated">Recent Jobs</li>
+                <li data-target="freelancer">Freelancer</li>
+                <li data-target="fullTime">Full Time</li>
+                <li data-target="partTime">Part Time</li>
+            </ul>
+            <div class="jobs_container">
+                <li data-item="fullTime" class="jlist">
+                    <img src="images//google.png" alt="img">
+                    <h3>Web Developer</h3>
+                    <p>$900 - 1200/m</p>
+                    <span id="key">Full Time</span>
+                </li>
+                <li data-item="freelancer" class="jlist">
+                    <img src="images//uber.png" alt="img">
+                    <h3>Freelancer</h3>
+                    <p>$900 - 1200/m</p>
+                    <span id="key">Freelancer</span>
+                </li>
+                <li data-item="partTime" class="jlist">
+                    <img src="images//linkedin.png" alt="img">
+                    <h3>Business Associate</h3>
+                    <p>$900 - 1200/m</p>
+                    <span id="key">Part Time</span>
+                </li>
+                <li data-item="fullTime" class="jlist">
+                    <img src="images//facebook.png" alt="img">
+                    <h3>Digital Marketing</h3>
+                    <p>$900 - 1200/m</p>
+                    <span id="key">Full Time</span>
+                </li>
+                <li data-item="partTime" class="jlist">
+                    <img src="images//yahoo.png" alt="img">
+                    <h3>User Experience</h3>
+                    <p>$900 - 1200/m</p>
+                    <span id="key">Part Time</span>
+                </li>
+            </div>
+        </div>
+    </section>
 
     <!-- Brand Section -->
-
+    <section class="brand">
+        <div class="container">
+            <div class="brand_heading">
+                <h2 class="brand_title">Trusted by the world's best</h2>
+                <p class="brand_text">Most viewed and all-time top-selling services</p>
+            </div>
+            <div class="brands_wrapper">
+                <div class="brand_img">
+                    <img src="images/t1.png" alt="img">
+                </div>
+                <div class="brand_img">
+                    <img src="images/t2.png" alt="img">
+                </div>
+                <div class="brand_img">
+                    <img src="images/t3.png" alt="img">
+                </div>
+                <div class="brand_img">
+                    <img src="images/t4.png" alt="img">
+                </div>
+                <div class="brand_img">
+                    <img src="images/t5.png" alt="img">
+                </div>
+                <div class="brand_img">
+                    <img src="images/t6.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Team Section -->
-
-
-    <!-- Contact Section -->
-
-
+    <section class="team" id="contact">
+        <div class="container">
+            <div class="team_heading">
+                <h2 class="team_title">Highest Rated Freelancers</h2>
+                <p class="team_text">Most viewed and all-time top-selling services</p>
+            </div>
+            <div class="team_wrapper">
+                <div class="team_member">
+                    <img src="images/fl-1.png" alt="img">
+                    <h3>Robert Fox</h3>
+                    <div class="skills">
+                        <span id="key">HTML</span>
+                        <span id="key">CSS</span>
+                        <span id="key">JS</span>
+                    </div>
+                    <a href="#" class="g_btn">View Profile</a>
+                </div>
+                <div class="team_member">
+                    <img src="images/fl-2.png" alt="img">
+                    <h3>Kristin Watson</h3>
+                    <div class="skills">
+                        <span id="key">HTML</span>
+                        <span id="key">CSS</span>
+                        <span id="key">JS</span>
+                    </div>
+                    <a href="#" class="g_btn">View Profile</a>
+                </div>
+                <div class="team_member">
+                    <img src="images/fl-3.png" alt="img">
+                    <h3>Darell Steward</h3>
+                    <div class="skills">
+                        <span id="key">HTML</span>
+                        <span id="key">CSS</span>
+                        <span id="key">JS</span>
+                    </div>
+                    <a href="#" class="g_btn">View Profile</a>
+                </div>
+                <div class="team_member">
+                    <img src="images/fl-4.png" alt="img">
+                    <h3>Thersa Webb</h3>
+                    <div class="skills">
+                        <span id="key">HTML</span>
+                        <span id="key">CSS</span>
+                        <span id="key">JS</span>
+                    </div>
+                    <a href="#" class="g_btn">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="top">
+                <div>
+                    <img src="images/logo.png" alt="logo" class="logo">
+                    <p>Search your desired jobs</p>
+                </div>
+                <div class="social_icons">
+                    <a href="#">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-square-behance"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div>
+                    <h3>Project</h3>
+                    <a href="#">Changelog</a>
+                    <a href="#">Status</a>
+                    <a href="#">License</a>
+                    <a href="#">All Versions</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="#">Github</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Twitter</a>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                    <a href="#">Support</a>
+                    <a href="#">Troubleshooting</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <h3>Others</h3>
+                    <a href="#">Terms of Services</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">License</a>
+                </div>
+            </div>
+            <span class="copyright">&copy;Copyright <span id="year"></span>. All rights reserved</span>
+        </div>
+    </footer>
 
 
     <script src="main.js"></script>
