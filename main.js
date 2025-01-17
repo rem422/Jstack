@@ -1,3 +1,4 @@
+// Navbar mobile menu
 const menuBtn =  document.querySelector('.navbar .menu_btn i');
 const mobileMenu = document.querySelector('.navbar .nav_menu');
 const menuItems = document.querySelectorAll(".navbar .nav_menu .nav_link");
@@ -15,7 +16,7 @@ menuItems.forEach((item) => {
 });
 
 
-// Job Listing buttons fuction
+// Job Listing buttons and filtering
 const sortBtns = document.querySelectorAll(".jobs_id > *");
 const sortItems = document.querySelectorAll(".jobs_container > * ");
 
