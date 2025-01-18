@@ -12,10 +12,7 @@ sortBtns.forEach((btn) => {
     sortItems.forEach((item) => {
       item.classList.add("delete");
 
-      if (
-        item.getAttribute("data-item") === targetData ||
-        targetData === "all"
-      ) {
+      if (item.getAttribute("data-item") === targetData || targetData === "all") {
         item.classList.remove("delete");
       }
     });
