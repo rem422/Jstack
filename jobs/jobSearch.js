@@ -10,8 +10,6 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 
-
-
 const displayItems = (items) => {
     const jobsContainer = document.querySelector(".jobs_container");
 
@@ -29,6 +27,10 @@ const displayItems = (items) => {
         `;
 
         jobsContainer.appendChild(jList);
+
+        jList.addEventListener('click', () => {
+            window.location.href = `job_details.html?id=${index}`;
+        });
     });
 };
 

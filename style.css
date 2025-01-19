@@ -80,6 +80,10 @@ section {
     border-radius: 20px;
 }
 
+.sec-space {
+    padding: 6rem 0;
+}
+
 .extra-space {
     padding-top: 8rem;
 }
@@ -366,8 +370,33 @@ section {
     font-size: 1.1rem;
 }
 
+/* Job details page */
+.job_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8fcfa;
+    border: 1px solid #51a995;
+    border-radius: 38px;
+    padding: 2rem;
+}
 
+.job_header .job_img {
+    display: flex;
+    align-items: center;
+}
 
+.job_header .job_img img {
+    width: 100px;
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-right: 2rem;
+}
+
+.job-description p {
+    padding-bottom: 2rem;
+}
 
 
 
@@ -469,8 +498,17 @@ section {
     }
 
 /* features section */
+.features_cards_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
     .features_card {
-        width: 80%;
+        width: 50%;
         margin: auto;
     }
 
@@ -534,9 +572,33 @@ section {
     width: 50%;
     margin-bottom: 50px;
 }
+
+/* job details */
+    .job_header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        padding: 1rem;
+    }
+
+    .job_header .job_img {
+        padding-bottom: 1.2rem;
+}
+
+.job_header .job_img img {
+        padding: 1rem;
+        border-radius: 10px;
+}
 }
 
 @media(max-width: 500px) {
+/* Features section */
+    .features_card {
+        width: 100%;
+        margin: auto;
+    }
     /* jobs section */
     .jobs .jlist {
         width: 100%;
@@ -546,4 +608,18 @@ section {
     .team_wrapper .team_member{
         width: 100%;
     }
+
+    /* job details */
+    .job_img {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 1.2rem;
+}
+
+.job_header .job_img img {
+    margin-right: 0;
+}
 }

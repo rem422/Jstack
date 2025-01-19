@@ -38,22 +38,8 @@
     </nav>
 
     <!-- Job Listing Section -->
-    <section class="jobs" id="jobs">
-        <div class="container">
-            <div class="jobs_heading">
-                <h2 class="jobs_title">Jobs in demand</h2>
-                <p class="jobs_text">Most viewed and all-time top-selling services</p>
-            </div>
-
-            <form action="#">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search Jobs" id="search_bar">
-            </form>
-
-            <div class="jobs_container" id="root">
-            </div>
-        </div>
-    </section>
+    <div id="jobDetails" class="extra-space container">
+    </div>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -109,6 +95,73 @@
             <span class="copyright">&copy;Copyright <span id="year"></span>. All rights reserved</span>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParam = new URLSearchParams(window.location.search);
+            const index = urlParam.get('id');
+            const selectJob = jCategory[index];
+
+            const jobDetailsContainer = document.getElementById('jobDetails');
+            jobDetailsContainer.innerHTML = `
+            <div class="job_header">
+            <div class="job_img">
+                <img src=${selectJob.image} alt="google">
+            <div>
+                <h2>${selectJob.companyName}</h2>
+                <span>${selectJob.location}</span>
+            </div>
+            </div>
+            <a href="#" class="g_btn">Apply Now</a>
+        </div>
+
+    <div class="features">
+        <div class="container">
+            <div class="features_wrapper">
+                <div class="features_cards_wrapper">
+                    <div class="features_card">
+                        <img class="features_card_img" src="../images/vacancy.png" alt="img">
+                        <h3 class="features_card_title">Vacancy</h3>
+                        <p class="features_card_text">${selectJob.vacancy}</p>
+                    </div>
+                    <div class="features_card">
+                        <img class="features_card_img" src="../images/fe 1.png" alt="img">
+                        <h3 class="features_card_title">Position</h3>
+                        <p class="features_card_text">${selectJob.title}</p>
+                    </div>
+                    <div class="features_card">
+                        <img class="features_card_img" src="../images/hour.png" alt="img">
+                        <h3 class="features_card_title">Hours</h3>
+                        <p class="features_card_text">${selectJob.hours}</p>
+                    </div>
+                    <div class="features_card">
+                        <img class="features_card_img" src="../images/salary.png" alt="img">
+                        <h3 class="features_card_title">Salary</h3>
+                        <p class="features_card_text">${selectJob.rate}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="job-description sec-space">
+        <h3>Job Description</h3>
+        <p>${selectJob.jobDesc}</p>
+        <h3>Employment Status</h3>
+        <p>${selectJob.employment}</p>
+
+        <h3>Workplace</h3>
+        <p>${selectJob.workPlace}</p>
+
+        <h3>Education Requirements</h3>
+        <p>${selectJob.education}</p>
+
+        <h3>Experience Requirements</h3>
+        <p>${selectJob.experience}</p>
+    </div>
+    `;
+
+        });
+    </script>
 
 
     <script src="../main.js"></script>
